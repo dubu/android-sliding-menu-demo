@@ -4,7 +4,7 @@
         <!--
         Each of these buttons will launch an Activity.
         The Button text is the class name of the Activity to launch.
-        -->
+
         <Button android:text="PushLeftPushRightAnimation" android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal" />
         <Button android:text="AnimationStackedFrames" android:layout_width="wrap_content" android:layout_height="wrap_content"
@@ -15,6 +15,7 @@
             android:layout_gravity="center_horizontal" />
         <Button android:text="HorzScrollWithListMenu" android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal" />
+              -->
         <Button android:text="HorzScrollWithImageMenu" android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal" />
     </LinearLayout>

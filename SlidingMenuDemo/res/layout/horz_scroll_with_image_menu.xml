@@ -5,8 +5,24 @@
     <!--
     This ImageView is used as a menu.
     -->
-    <ImageView android:id="@+id/menu" android:src="@drawable/fb_menu" android:layout_width="fill_parent"
+    <ImageView android:id="@+id/menu" android:src="@drawable/l01" android:layout_width="fill_parent"
         android:layout_height="fill_parent" android:scaleType="fitStart" />
+    <ImageView android:id="@+id/menu2" android:layout_width="fill_parent"
+               android:layout_height="60dp" android:scaleType="fitStart" android:layout_gravity="center_horizontal|top"
+               android:layout_alignParentLeft="true" android:layout_marginLeft="0dp"
+               android:layout_alignParentTop="true" android:layout_marginTop="55dp" android:background="@drawable/l02"/>
+    <ImageView android:id="@+id/menu3" android:layout_width="fill_parent"
+               android:layout_height="60dp" android:scaleType="fitStart" android:layout_gravity="center_horizontal|top"
+               android:layout_alignParentLeft="true" android:layout_marginLeft="0dp"
+               android:layout_alignParentTop="true" android:layout_marginTop="110dp" android:background="@drawable/l03"/>
+    <ImageView android:id="@+id/menu4" android:layout_width="fill_parent"
+               android:layout_height="60dp" android:scaleType="fitStart" android:layout_gravity="center_horizontal|top"
+               android:layout_alignParentLeft="true" android:layout_marginLeft="0dp"
+               android:layout_alignParentTop="true" android:layout_marginTop="165dp" android:background="@drawable/l04"/>
+    <ImageView android:id="@+id/menu5" android:layout_width="fill_parent"
+               android:layout_height="100dp" android:scaleType="fitStart" android:layout_gravity="center_horizontal|top"
+               android:layout_alignParentLeft="true" android:layout_marginLeft="0dp"
+               android:layout_alignParentTop="true" android:layout_marginTop="220dp" android:background="@drawable/l05"/>
 
     <!--
     This HorizontalScrollView will contain a LinearLayout that will contain a transparent

@@ -41,6 +41,13 @@ import android.widget.ListView;
 public class AnimationStackedFrames extends Activity implements AnimationListener {
     FrameLayout mFrameLayout;
     View menu;
+    View menu2;
+    View menu3;
+    View menu4;
+    View menu5;
+
+
+
     View app;
     boolean menuOut = false;
 
@@ -89,7 +96,9 @@ public class AnimationStackedFrames extends Activity implements AnimationListene
         setContentView(R.layout.animation_stacked_frames);
 
         mFrameLayout = (FrameLayout) this.findViewById(R.id.flipper);
+
         menu = mFrameLayout.findViewById(R.id.menu);
+
         app = mFrameLayout.findViewById(R.id.app);
 
         ViewUtils.printView("menu", menu);
@@ -100,8 +109,10 @@ public class AnimationStackedFrames extends Activity implements AnimationListene
 
         View btns = findViewById(R.id.btns);
         btns.findViewById(R.id.BtnSlide).setOnClickListener(new ClickListener());
+
         btns.findViewById(R.id.BtnIncX).setOnClickListener(new ViewMover(menu, 5));
         btns.findViewById(R.id.BtnDecX).setOnClickListener(new ViewMover(menu, -5));
+
     }
 
     @Override
