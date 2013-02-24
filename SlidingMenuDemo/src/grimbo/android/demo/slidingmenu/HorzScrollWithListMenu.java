@@ -21,6 +21,7 @@
  */
 package grimbo.android.demo.slidingmenu;
 
+import android.widget.*;
 import grimbo.android.demo.slidingmenu.MyHorizontalScrollView.SizeCallback;
 
 import java.util.Date;
@@ -33,10 +34,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.HorizontalScrollView;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.Toast;
 
 /**
  * This demo uses a custom HorizontalScrollView that ignores touch events, and therefore does NOT allow manual scrolling.
@@ -67,10 +64,10 @@ public class HorzScrollWithListMenu extends Activity {
         app = inflater.inflate(R.layout.horz_scroll_app, null);
         ViewGroup tabBar = (ViewGroup) app.findViewById(R.id.tabBar);
 
-        ListView listView = (ListView) app.findViewById(R.id.list);
+        ListView listView = (ListView) app.findViewById(R.id.mainList);
         ViewUtils.initListView(this, listView, "Item ", 30, android.R.layout.simple_list_item_1);
 
-        listView = (ListView) menu.findViewById(R.id.list);
+        listView = (ListView) menu.findViewById(R.id.mainList);
         ViewUtils.initListView(this, listView, "Menu ", 30, android.R.layout.simple_list_item_1);
 
         btnSlide = (ImageView) tabBar.findViewById(R.id.BtnSlide);
@@ -103,9 +100,10 @@ public class HorzScrollWithListMenu extends Activity {
         @Override
         public void onClick(View v) {
             Context context = menu.getContext();
-            String msg = "Slide " + new Date();
-            Toast.makeText(context, msg, 1000).show();
-            System.out.println(msg);
+
+            //String msg = "Slide " + new Date();
+            //Toast.makeText(context, msg, 1000).show();
+            //System.out.println(msg);
 
             int menuWidth = menu.getMeasuredWidth();
 

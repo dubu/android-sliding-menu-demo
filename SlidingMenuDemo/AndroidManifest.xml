@@ -14,7 +14,7 @@
         </activity>
 
         <!-- -->
-        <activity android:name=".HorzScrollWithImageMenu" android:label="HorzScrollWithImageMenu">
+        <activity android:name=".HorzScrollWithImageMenu" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -23,6 +23,15 @@
 
         <!-- Menu -->
         <activity android:name=".MenuActivity" android:label="MenuActivity">
+        </activity>
+
+        <activity android:name=".HorzScrollWithFieldMenu" android:label="FieldActivity">
+        </activity>
+        <activity android:name=".HorzScrollWithProfileMenu" android:label="PrifleActivity">
+        </activity>
+        <activity android:name=".HorzScrollWithSettingMenu" android:label="SettingActivity">
+        </activity>
+        <activity android:name=".HorzScrollWithVideoMenu" android:label="VideoActivity">
         </activity>
 
 

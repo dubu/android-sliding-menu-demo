@@ -8,14 +8,9 @@
             android:padding="0px" android:layout_margin="0px" android:src="@drawable/upmenu_btn" />
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" />
     </LinearLayout>
-    <TextView
+    <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3-Line list with image"
-            android:id="@+id/textView" android:layout_gravity="left|center_vertical" android:textStyle="bold"
-            android:textSize="27dp" android:textColor="@android:color/black" android:background="@drawable/img_bg"
-            android:layout_marginLeft="10dp"/>
-    <ListView android:id="@+id/mainList" android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:background="#F7F1EE" android:cacheColorHint="#F7F1EE">
-    </ListView>
+            android:id="@+id/contImg" />
+
 </LinearLayout>

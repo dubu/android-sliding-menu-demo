@@ -29,7 +29,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -39,9 +38,9 @@ import java.util.ArrayList;
  * 
  * The HSV has a transparent View as the first child, which means the menu will show through when the HSV is scrolled.
  */
-public class HorzScrollWithImageMenu extends Activity {
+public class HorzScrollWithSettingMenu extends Activity {
     ArrayList<ListItemData> itemlist;
-    ListView listView ;
+    ImageView imageView;
     MyHorizontalScrollView scrollView;
     View menu;
     View app;
@@ -54,46 +53,37 @@ public class HorzScrollWithImageMenu extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //맨앞페이지
         //startActivity(new Intent(this, SplashActivity.class));
 
         LayoutInflater inflater = LayoutInflater.from(this);
         setContentView(inflater.inflate(R.layout.horz_scroll_with_image_menu, null));
-
         scrollView = (MyHorizontalScrollView) findViewById(R.id.myScrollView);
         menu = findViewById(R.id.menu);
-        app = inflater.inflate(R.layout.horz_scroll_app, null);
+        app = inflater.inflate(R.layout.horz_scroll_prop, null);
         ViewGroup tabBar = (ViewGroup) app.findViewById(R.id.tabBar);
 
+        imageView = (ImageView) app.findViewById(R.id.contImg);
+        imageView.setImageResource(R.drawable.setting);
 
-        //ViewUtils.initListView(this, listView, "Item ", 30, android.R.layout.simple_list_item_1);
 
-        itemlist = new ArrayList<ListItemData>();
-        for (int i=0 ; i <10 ;i++){
-            ListItemData cusItemData = new ListItemData();
-            cusItemData.setTitleText(String.format("Line list item %d",i));
-            cusItemData.setDiscriptionText(String.format("Dapibus, neque id cursus faucibus, tortor neque egestas  %d", i));
-            cusItemData.setImageResourceId(R.drawable.img_profile);
-            itemlist.add(cusItemData);
-
-            ListItemData cusItemSecData = new ListItemData();
-            cusItemSecData.setTitleText(String.format("Second 3-Line %d",i));
-            cusItemSecData.setDiscriptionText(String.format("Dapibus, neque id cursus faucibus, tortor neque egestas arrangement... including ", i));
-            cusItemSecData.setImageResourceId(R.drawable.img_profile02);
-            itemlist.add(cusItemSecData);
-        }
-
-        listView = (ListView) app.findViewById(R.id.mainList);
-        listView.setAdapter(new ListVeiwAdapter(this, itemlist, this));
-
-        // menu list
+        // top
         btnSlide = (ImageView) tabBar.findViewById(R.id.BtnSlide);
-        ImageView imageView01 = (ImageView)findViewById(R.id.menu1);
         btnSlide.setOnClickListener(new HorzScrollWithListMenu.ClickListenerForScrolling(scrollView, menu));
-        imageView01.setOnClickListener(new HorzScrollWithListMenu.ClickListenerForScrolling(scrollView, menu));
 
-        // menu Field
-        ImageView imageView02 = (ImageView)findViewById(R.id.menu2);
+        // list
+        ImageView imageView01 = (ImageView)findViewById(R.id.menu1);
+        imageView01.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(scrollView.getContext(), HorzScrollWithImageMenu.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                startActivity(intent);
+            }
+        });
+
+        // field
+
+        ImageView imageView02 = (ImageView)findViewById(R.id.menu3);
         imageView02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -103,16 +93,21 @@ public class HorzScrollWithImageMenu extends Activity {
             }
         });
 
+
         // menu Setting& Controls
+        ImageView imageView03 = (ImageView)findViewById(R.id.menu3);
+        imageView03.setOnClickListener(new HorzScrollWithListMenu.ClickListenerForScrolling(scrollView, menu));
+
+        /*
         ImageView imageView03 = (ImageView)findViewById(R.id.menu3);
         imageView03.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(scrollView.getContext(), HorzScrollWithSettingMenu.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(intent);
             }
         });
+        */
 
         // menu Video
         ImageView imageView04 = (ImageView)findViewById(R.id.menu4);
@@ -135,8 +130,6 @@ public class HorzScrollWithImageMenu extends Activity {
                 startActivity(intent);
             }
         });
-
-
 
 
         // Create a transparent view that pushes the other views in the HSV to the right.

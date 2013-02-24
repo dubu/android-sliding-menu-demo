@@ -1,35 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent"
-    android:layout_height="fill_parent" android:background="#00ffffff" android:padding="0px" android:layout_margin="0px">
+    android:layout_height="fill_parent" android:background="@drawable/bg_splash" android:padding="0px" android:layout_margin="0px">
 
     <!--
     This ImageView is used as a menu.
     -->
-    <ImageView android:id="@+id/menu" android:src="@drawable/l01" android:layout_width="fill_parent"
-        android:layout_height="fill_parent" android:scaleType="fitStart" />
-    <ImageView android:id="@+id/menu2" android:layout_width="fill_parent"
-               android:layout_height="60dp" android:scaleType="fitStart" android:layout_gravity="center_horizontal|top"
+    <ImageView android:id="@+id/menu" android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:scaleType="fitStart" android:background="@drawable/img00"/>
+    <ImageView android:id="@+id/menu1" android:layout_width="wrap_content"
+               android:layout_height="wrap_content" android:scaleType="fitStart" android:layout_gravity="top"
                android:layout_alignParentLeft="true" android:layout_marginLeft="0dp"
-               android:layout_alignParentTop="true" android:layout_marginTop="55dp" android:background="@drawable/l02"/>
-    <ImageView android:id="@+id/menu3" android:layout_width="fill_parent"
-               android:layout_height="60dp" android:scaleType="fitStart" android:layout_gravity="center_horizontal|top"
+               android:layout_alignParentTop="true" android:layout_marginTop="51dp" android:background="@drawable/img01"/>
+    <ImageView android:id="@+id/menu2" android:layout_width="wrap_content"
+               android:layout_height="wrap_content" android:scaleType="fitStart" android:layout_gravity="top"
                android:layout_alignParentLeft="true" android:layout_marginLeft="0dp"
-               android:layout_alignParentTop="true" android:layout_marginTop="110dp" android:background="@drawable/l03"/>
-    <ImageView android:id="@+id/menu4" android:layout_width="fill_parent"
-               android:layout_height="60dp" android:scaleType="fitStart" android:layout_gravity="center_horizontal|top"
+               android:layout_alignParentTop="true" android:layout_marginTop="93dp" android:background="@drawable/img02"/>
+    <ImageView android:id="@+id/menu3" android:layout_width="wrap_content"
+               android:layout_height="wrap_content" android:scaleType="fitStart" android:layout_gravity="top"
                android:layout_alignParentLeft="true" android:layout_marginLeft="0dp"
-               android:layout_alignParentTop="true" android:layout_marginTop="165dp" android:background="@drawable/l04"/>
-    <ImageView android:id="@+id/menu5" android:layout_width="fill_parent"
-               android:layout_height="100dp" android:scaleType="fitStart" android:layout_gravity="center_horizontal|top"
+               android:layout_alignParentTop="true" android:layout_marginTop="140dp" android:background="@drawable/img03"/>
+    <ImageView android:id="@+id/menu4" android:layout_width="wrap_content"
+               android:layout_height="wrap_content" android:scaleType="fitStart" android:layout_gravity="top"
                android:layout_alignParentLeft="true" android:layout_marginLeft="0dp"
-               android:layout_alignParentTop="true" android:layout_marginTop="220dp" android:background="@drawable/l05"/>
-
-    <!--
-    This HorizontalScrollView will contain a LinearLayout that will contain a transparent
-    View (that allows the menu above to show through) and the other application Views.
-    -->
+               android:layout_alignParentTop="true" android:layout_marginTop="188dp" android:background="@drawable/img04"/>
+    <ImageView android:id="@+id/menu5" android:layout_width="wrap_content"
+               android:layout_height="wrap_content" android:scaleType="fitStart" android:layout_gravity="top"
+               android:layout_alignParentLeft="true" android:layout_marginLeft="0dp"
+               android:layout_alignParentTop="true" android:layout_marginTop="236dp" android:background="@drawable/img05"/>
     <grimbo.android.demo.slidingmenu.MyHorizontalScrollView android:id="@+id/myScrollView"
-        android:layout_width="fill_parent" android:layout_height="fill_parent" android:background="#00ffffff" android:padding="0px"
+        android:layout_width="fill_parent" android:layout_height="fill_parent" android:padding="0px"
         android:layout_margin="0px" android:fadingEdge="none" android:fadingEdgeLength="0px" android:scrollbars="none">
 
         <LinearLayout android:id="@+id/top" android:layout_height="fill_parent" android:layout_width="fill_parent"
@@ -38,5 +37,13 @@
         </LinearLayout>
 
     </grimbo.android.demo.slidingmenu.MyHorizontalScrollView>
+
+
+
+
+    <!--
+    This HorizontalScrollView will contain a LinearLayout that will contain a transparent
+    View (that allows the menu above to show through) and the other application Views.
+    -->
 
 </FrameLayout>
